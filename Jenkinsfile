@@ -10,5 +10,14 @@ pipeline {
                checkout scm 
             }
         }
+        stage('Build') {
+            steps {
+                sh ''' 
+                docker build -t my-docker-gs-ping:v1.0 -f Dockerfile
+                '''
+            }
+        }
+
+
     }
 }
