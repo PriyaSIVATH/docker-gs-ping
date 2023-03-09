@@ -6,7 +6,8 @@ pipeline {
     stages {
         stage('checkout') {
             steps {
-                echo 'Hello World'
+               // echo 'Hello World'
+               checkout scm 
             }
         }
     }
